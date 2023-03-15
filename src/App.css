@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.circle {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  z-index: 5;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -22%;
+  padding: 0.5rem;
+  border: 0.1rem solid #353d696f;
+  border-radius: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wavybox {
+  margin-left: auto;
+  margin-right: auto;
+  --size: 2.8rem;
+  height: 9rem;
+  /* height: 200px;
+  margin: 5px;
+  border: 1px solid; */
+
+  background: radial-gradient(var(--size) at 50% 0px, #0000 99%, red 101%) 50%
+    var(--size) / calc(4 * var(--size)) 100% no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.curv1 {
+  height: 4rem;
+  border-top: 0.1rem solid #353d696f;
+  border-left: 0.1rem solid #353d696f;
+  border-radius: 1.4rem 60% 0px 0px;
+  background-color: #303347;
+}
+.curv2 {
+  height: 4rem;
+  border-top: 0.1rem solid #353d696f;
+  border-right: 0.1rem solid #353d696f;
+  border-radius: 60% 1.4rem 0px 0px;
+  background-color: #303347;
+}
+.curvMid {
+  height: 4rem;
+  border-radius: 55% 55% 0 0;
+  border: 0px;
+  background-color: #303347;
+}
+.curvMid::before {
+  height: 4rem;
+  width: 100%;
+  border-radius: 100%;
+  border-bottom: 0.1rem solid #353d696f;
+  margin-top: 0px;
+  background-color: #14172b;
+  display: inline-block;
+  vertical-align: top;
+  content: "";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contentsbox {
+  border-radius: 0px 0px 1.4rem 1.4rem;
+  border-right: 0.1rem solid #353d696f;
+  border-left: 0.1rem solid #353d696f;
+  border-bottom: 0.1rem solid #353d696f;
+  background: linear-gradient(
+      180deg,
+      rgba(98, 106, 136, 0.1) 0%,
+      rgba(46, 49, 73, 0.1) 107.43%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(236, 240, 255, 0.1) 0%,
+      rgba(46, 49, 73, 0) 107.43%
+    );
 }
